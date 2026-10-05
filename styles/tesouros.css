@@ -1,0 +1,290 @@
+.t20t-cartao {
+	--t20t-ouro: #b8862b;
+	--t20t-borda: color-mix(in srgb, currentColor 20%, transparent);
+	--t20t-fundo: color-mix(in srgb, currentColor 6%, transparent);
+	font-size: var(--font-size-13, 13px);
+}
+
+.t20t-cartao .t20t-cabecalho {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	border-bottom: 2px solid var(--t20t-ouro);
+	margin-bottom: 0.4rem;
+}
+
+.t20t-cartao .t20t-cabecalho i {
+	color: var(--t20t-ouro);
+}
+
+.t20t-cartao h3 {
+	margin: 0;
+	border: none;
+	font-size: 1.05em;
+}
+
+.t20t-cartao h4 {
+	margin: 0.5rem 0 0.2rem;
+	font-size: 0.85em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	opacity: 0.75;
+	border: none;
+}
+
+.t20t-cartao ul.t20t-lista {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.t20t-cartao .t20t-link {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 3px 5px;
+	border: 1px solid var(--t20t-borda);
+	border-radius: 4px;
+	background: var(--t20t-fundo);
+	cursor: grab;
+}
+
+.t20t-cartao .t20t-link.t20t-sem-link {
+	cursor: default;
+}
+
+.t20t-cartao .t20t-link:not(.t20t-sem-link):hover {
+	border-color: var(--t20t-ouro);
+	box-shadow: 0 0 4px color-mix(in srgb, var(--t20t-ouro) 60%, transparent);
+}
+
+.t20t-cartao .t20t-link img {
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+	border: none;
+	border-radius: 3px;
+	object-fit: cover;
+}
+
+.t20t-cartao .t20t-info {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+}
+
+.t20t-cartao .t20t-nome {
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.t20t-cartao .t20t-meta,
+.t20t-app .t20t-meta {
+	font-size: 0.85em;
+	opacity: 0.7;
+}
+
+.t20t-cartao .t20t-detalhes {
+	margin: 2px 0 0;
+	padding-left: 1rem;
+	font-size: 0.85em;
+}
+
+.t20t-cartao .t20t-alca {
+	opacity: 0.4;
+}
+
+.t20t-cartao .t20t-faltando {
+	display: flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 3px 5px;
+	border: 1px dashed var(--t20t-borda);
+	border-radius: 4px;
+	opacity: 0.8;
+}
+
+.t20t-cartao .t20t-escolha {
+	padding: 4px;
+	border: 1px solid var(--t20t-ouro);
+	border-radius: 5px;
+}
+
+.t20t-cartao .t20t-escolha-titulo {
+	display: block;
+	font-size: 0.85em;
+	font-weight: 600;
+	margin-bottom: 3px;
+	color: var(--t20t-ouro);
+}
+
+.t20t-cartao .t20t-total {
+	margin-top: 0.5rem;
+	padding-top: 0.3rem;
+	border-top: 1px solid var(--t20t-borda);
+	text-align: right;
+}
+
+.t20t-cartao .t20t-dica,
+.t20t-cartao .t20t-vazio {
+	margin: 0.3rem 0 0;
+	font-size: 0.85em;
+	opacity: 0.7;
+}
+
+.t20t-cartao .t20t-rolagens {
+	margin-top: 0.3rem;
+	font-size: 0.82em;
+}
+
+.t20t-cartao .t20t-rolagens summary {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.t20t-cartao .t20t-rolagens ol {
+	margin: 0.2rem 0 0;
+	padding-left: 1.3rem;
+}
+
+.t20t-gerador .t20t-corpo {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.t20t-gerador fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.t20t-gerador .t20t-check {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	flex: 0 0 auto;
+}
+
+.t20t-gerador .t20t-qtd {
+	flex: 0 0 4rem;
+}
+
+.t20t-gerador .t20t-rodape {
+	display: flex;
+	gap: 0.4rem;
+}
+
+.t20t-gerador .t20t-carregando i {
+	animation: fa-spin 1s linear infinite;
+}
+
+.t20t-catalogo .window-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.t20t-catalogo .t20t-catalogo-corpo {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	height: 100%;
+	min-height: 0;
+}
+
+.t20t-catalogo .t20t-pacotes ul {
+	list-style: none;
+	margin: 0.3rem 0 0;
+	padding: 0;
+	max-height: 160px;
+	overflow-y: auto;
+}
+
+.t20t-catalogo .t20t-pacotes label {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.t20t-catalogo .t20t-resumo {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+}
+
+.t20t-catalogo .t20t-chip {
+	padding: 1px 6px;
+	border-radius: 10px;
+	border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+	font-size: 0.85em;
+}
+
+.t20t-catalogo .t20t-filtros {
+	display: flex;
+	gap: 0.4rem;
+}
+
+.t20t-catalogo .t20t-filtros input {
+	flex: 2;
+}
+
+.t20t-catalogo .t20t-filtros select {
+	flex: 1;
+}
+
+.t20t-catalogo .t20t-filtros button {
+	flex: 0 0 2.2rem;
+}
+
+.t20t-catalogo .t20t-tabela-rolagem {
+	flex: 1;
+	min-height: 0;
+	overflow-y: auto;
+}
+
+.t20t-catalogo .t20t-tabela {
+	width: 100%;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+.t20t-catalogo .t20t-tabela thead th {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: var(--color-cool-5, #1d1f24);
+	color: var(--color-light-1, #f0f0f0);
+}
+
+.t20t-catalogo .t20t-tabela td {
+	vertical-align: middle;
+}
+
+.t20t-catalogo .t20t-item-nome {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	cursor: pointer;
+}
+
+.t20t-catalogo .t20t-item-nome img {
+	width: 22px;
+	height: 22px;
+	border: none;
+}
+
+.t20t-catalogo tr.t20t-ignorado {
+	opacity: 0.55;
+}
+
+.t20t-catalogo td select {
+	width: 100%;
+}
+
+button.t20t-abrir {
+	flex: 1 1 100%;
+}

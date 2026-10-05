@@ -1,0 +1,125 @@
+{
+	"T20T": {
+		"Gerador": {
+			"Titulo": "T20 Treasure Generator",
+			"Botao": "Generate Treasure",
+			"PorND": "Treasure by Challenge Level (Table 8-1)",
+			"ND": "Challenge Level",
+			"TipoTesouro": "Creature treasure",
+			"TipoTesouroDica": "Half divides Money by 2; Double rolls twice on each column.",
+			"Tesouro": {
+				"padrao": "Standard",
+				"metade": "Half",
+				"dobro": "Double"
+			},
+			"Vezes": "Number of rolls",
+			"VezesDica": "One roll per defeated creature, or one for the encounter's CL.",
+			"Colunas": "Columns",
+			"Rolar": "Roll treasure",
+			"Direta": "Direct roll",
+			"Categoria": "Category",
+			"Quantidade": "Quantity",
+			"RolarDireto": "Roll category"
+		},
+		"Chat": {
+			"Remetente": "Treasure Generator",
+			"Dinheiro": "Money",
+			"Riquezas": "Valuables",
+			"Itens": "Items",
+			"Escolha": "Choose one (2D):",
+			"Total": "Estimated total value",
+			"Dica": "Drag items onto a sheet or chest. Click to open.",
+			"Rolagens": "Rolls",
+			"Nada": "No treasure this time.",
+			"Arraste": "Drag onto a sheet or chest",
+			"NaoEncontrado": "not found in the active compendiums",
+			"ItemSumiu": "This item no longer exists."
+		},
+		"Catalogo": {
+			"Titulo": "Treasure Catalog",
+			"Explicacao": "Every physical item (weapon, equipment, consumable, treasure) in the active compendiums and in the world is read on each roll. Items listed in the book tables use the book weight; the others (custom) are classified automatically and get the table's average weight. Use the Override column to fix any item's category.",
+			"Fontes": "Compendiums used",
+			"ItensFisicos": "physical items",
+			"ItensMundo": "World items",
+			"Buscar": "Search item or source…",
+			"Todas": "All categories",
+			"Ignorados": "Ignored",
+			"Ignorado": "— ignored —",
+			"Reindexar": "Re-read compendiums",
+			"Item": "Item",
+			"Tipo": "Type",
+			"Preco": "Price",
+			"Categoria": "Category",
+			"Peso": "Weight",
+			"Ajuste": "Override",
+			"Automatico": "Automatic",
+			"Excluir": "Never roll"
+		},
+		"Motivo": {
+			"livro": "book table",
+			"heuristica": "automatic classification",
+			"manual": "manual override",
+			"flag": "set on the item",
+			"sistema": "system item outside the tables",
+			"artefato": "artifact",
+			"sem-preco": "no price",
+			"arma-natural": "natural weapon",
+			"ja-superior": "already has upgrades/enchantments",
+			"alimento": "food",
+			"material": "material",
+			"tipo": "unsupported type"
+		},
+		"Limpar": {
+			"Botao": "Clear generated",
+			"Titulo": "Clear generated items",
+			"Confirmar": "Delete from the world every item created by the generator (superior, magic, valuables and coins)? Items already dragged onto sheets or chests are not affected.",
+			"Feito": "{total} generated item(s) deleted."
+		},
+		"Config": {
+			"Catalogo": {
+				"Nome": "Treasure catalog",
+				"Botao": "Open catalog",
+				"Dica": "Choose which compendiums are used and override each item's category."
+			},
+			"IncluirMundo": {
+				"Nome": "Include world items",
+				"Dica": "Items created in the Items tab are also rolled (copies of compendium items are skipped)."
+			},
+			"ExtrasSistema": {
+				"Nome": "Include system extras",
+				"Dica": "Includes system compendium items that are not in the book's treasure tables (vehicles, origin items, food…)."
+			},
+			"Alimentos": {
+				"Nome": "Food as miscellaneous items",
+				"Dica": "Dishes and food from custom compendiums join the Miscellaneous category."
+			},
+			"Peso": {
+				"Nome": "Custom item weight",
+				"Dica": "Chance multiplier for items not in the book tables. 1 = average chance of a table entry; 0 = never."
+			},
+			"Moedas": {
+				"Nome": "Create coin item",
+				"Dica": "Creates a treasure item representing the coins so they can be dragged into the chest."
+			},
+			"Copiar": {
+				"Nome": "Always create world copies",
+				"Dica": "Creates a world copy even for unmodified items. When off, the chat links straight to the compendium item."
+			},
+			"Pasta": {
+				"Nome": "Generated items folder",
+				"Dica": "Name of the Items tab folder that holds the generator's items."
+			},
+			"Rolagens": {
+				"Nome": "Show rolls in chat",
+				"Dica": "Adds a collapsible block with every roll made to the card."
+			}
+		},
+		"Erros": {
+			"ApenasMestre": "Only the GM can generate treasure.",
+			"NDInvalido": "Invalid CL: {nd}",
+			"TipoInvalido": "Unknown roll type: {tipo}",
+			"Geracao": "Error generating treasure: {erro}",
+			"SistemaIncompativel": "T20 Treasure Generator was made for the Tormenta20 system."
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"name": "t20-gerador-tesouros",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Módulo Foundry VTT: gerador de tesouros aleatórios para Tormenta20.",
+	"scripts": {
+		"build": "node tools/build.mjs"
+	},
+	"engines": {
+		"node": ">=22"
+	}
+}

@@ -1,0 +1,125 @@
+{
+	"T20T": {
+		"Gerador": {
+			"Titulo": "Gerador de Tesouros T20",
+			"Botao": "Gerar Tesouro",
+			"PorND": "Tesouro por Nível de Desafio (Tabela 8-1)",
+			"ND": "Nível de Desafio",
+			"TipoTesouro": "Tesouro da criatura",
+			"TipoTesouroDica": "Metade divide o Dinheiro por 2; Dobro rola duas vezes em cada coluna.",
+			"Tesouro": {
+				"padrao": "Padrão",
+				"metade": "Metade",
+				"dobro": "Dobro"
+			},
+			"Vezes": "Número de rolagens",
+			"VezesDica": "Uma rolagem por criatura derrotada, ou uma para o ND do combate.",
+			"Colunas": "Colunas",
+			"Rolar": "Rolar tesouro",
+			"Direta": "Rolagem direta",
+			"Categoria": "Categoria",
+			"Quantidade": "Quantidade",
+			"RolarDireto": "Rolar categoria"
+		},
+		"Chat": {
+			"Remetente": "Gerador de Tesouros",
+			"Dinheiro": "Dinheiro",
+			"Riquezas": "Riquezas",
+			"Itens": "Itens",
+			"Escolha": "Escolha um (2D):",
+			"Total": "Valor total estimado",
+			"Dica": "Arraste os itens para uma ficha ou baú. Clique para abrir.",
+			"Rolagens": "Rolagens",
+			"Nada": "Nenhum tesouro desta vez.",
+			"Arraste": "Arraste para uma ficha ou baú",
+			"NaoEncontrado": "não existe nos compêndios ativos",
+			"ItemSumiu": "Este item não existe mais."
+		},
+		"Catalogo": {
+			"Titulo": "Catálogo de Tesouros",
+			"Explicacao": "Todos os itens físicos (arma, equipamento, consumível, tesouro) dos compêndios ativos e do mundo são lidos a cada rolagem. Itens que aparecem nas tabelas do livro usam o peso do livro; os demais (customizados) são classificados automaticamente e recebem o peso médio da tabela. Use a coluna Ajuste para corrigir a categoria de qualquer item.",
+			"Fontes": "Compêndios usados",
+			"ItensFisicos": "itens físicos",
+			"ItensMundo": "Itens do mundo",
+			"Buscar": "Buscar item ou origem…",
+			"Todas": "Todas as categorias",
+			"Ignorados": "Ignorados",
+			"Ignorado": "— ignorado —",
+			"Reindexar": "Reler compêndios",
+			"Item": "Item",
+			"Tipo": "Tipo",
+			"Preco": "Preço",
+			"Categoria": "Categoria",
+			"Peso": "Peso",
+			"Ajuste": "Ajuste",
+			"Automatico": "Automático",
+			"Excluir": "Nunca sortear"
+		},
+		"Motivo": {
+			"livro": "tabela do livro",
+			"heuristica": "classificação automática",
+			"manual": "ajuste manual",
+			"flag": "definido no item",
+			"sistema": "item do sistema fora das tabelas",
+			"artefato": "artefato",
+			"sem-preco": "sem preço",
+			"arma-natural": "arma natural",
+			"ja-superior": "já possui melhorias/encantos",
+			"alimento": "alimento",
+			"material": "material",
+			"tipo": "tipo não suportado"
+		},
+		"Limpar": {
+			"Botao": "Limpar gerados",
+			"Titulo": "Limpar itens gerados",
+			"Confirmar": "Apagar do mundo todos os itens criados pelo gerador (superiores, mágicos, riquezas e moedas)? Itens já arrastados para fichas ou baús não são afetados.",
+			"Feito": "{total} item(ns) gerado(s) apagado(s)."
+		},
+		"Config": {
+			"Catalogo": {
+				"Nome": "Catálogo de tesouros",
+				"Botao": "Abrir catálogo",
+				"Dica": "Escolha os compêndios usados e ajuste a categoria de cada item."
+			},
+			"IncluirMundo": {
+				"Nome": "Incluir itens do mundo",
+				"Dica": "Itens criados na aba Itens também entram no sorteio (cópias de itens de compêndio são ignoradas)."
+			},
+			"ExtrasSistema": {
+				"Nome": "Incluir extras do sistema",
+				"Dica": "Inclui itens dos compêndios do sistema que não aparecem nas tabelas de tesouro do livro (veículos, itens de origem, alimentos…)."
+			},
+			"Alimentos": {
+				"Nome": "Alimentos como itens diversos",
+				"Dica": "Pratos e alimentos de compêndios customizados entram na categoria Diverso."
+			},
+			"Peso": {
+				"Nome": "Peso de itens customizados",
+				"Dica": "Multiplicador da chance de itens que não estão nas tabelas do livro. 1 = chance média de um item da tabela; 0 = nunca."
+			},
+			"Moedas": {
+				"Nome": "Criar item para moedas",
+				"Dica": "Cria um item do tipo tesouro representando as moedas, para poder arrastá-las para o baú."
+			},
+			"Copiar": {
+				"Nome": "Sempre criar cópias no mundo",
+				"Dica": "Cria uma cópia no mundo até para itens sem modificação. Desligado, o chat aponta direto para o item do compêndio."
+			},
+			"Pasta": {
+				"Nome": "Pasta dos itens gerados",
+				"Dica": "Nome da pasta na aba Itens onde ficam os itens criados pelo gerador."
+			},
+			"Rolagens": {
+				"Nome": "Mostrar rolagens no chat",
+				"Dica": "Inclui no cartão um bloco recolhível com todas as rolagens feitas."
+			}
+		},
+		"Erros": {
+			"ApenasMestre": "Apenas o mestre pode gerar tesouros.",
+			"NDInvalido": "ND inválido: {nd}",
+			"TipoInvalido": "Tipo de rolagem desconhecido: {tipo}",
+			"Geracao": "Erro ao gerar tesouro: {erro}",
+			"SistemaIncompativel": "Gerador de Tesouros T20 foi feito para o sistema Tormenta20."
+		}
+	}
+}

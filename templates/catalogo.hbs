@@ -1,0 +1,68 @@
+<div class="t20t-catalogo-corpo">
+	<p class="hint">{{localize "T20T.Catalogo.Explicacao"}}</p>
+
+	<details class="t20t-pacotes" open>
+		<summary>{{localize "T20T.Catalogo.Fontes"}}</summary>
+		<ul>
+			{{#each pacotes}}
+				<li>
+					<label>
+						<input type="checkbox" data-pacote="{{id}}" {{checked ativo}}>
+						<strong>{{rotulo}}</strong>
+						<span class="t20t-meta">{{pacote}} ({{tipoPacote}}){{#if ativo}} · {{total}} {{localize "T20T.Catalogo.ItensFisicos"}}{{/if}}</span>
+					</label>
+				</li>
+			{{/each}}
+		</ul>
+	</details>
+
+	<div class="t20t-resumo">
+		{{#each resumo}}<span class="t20t-chip">{{rotulo}}: <strong>{{total}}</strong></span>{{/each}}
+	</div>
+
+	<div class="t20t-filtros">
+		<input type="search" name="busca" value="{{filtro.texto}}" placeholder="{{localize 'T20T.Catalogo.Buscar'}}">
+		<select name="filtroCategoria">
+			<option value="todas" {{#if (eq filtro.categoria "todas")}}selected{{/if}}>{{localize "T20T.Catalogo.Todas"}} ({{totalClassificados}})</option>
+			<option value="ignorados" {{#if (eq filtro.categoria "ignorados")}}selected{{/if}}>{{localize "T20T.Catalogo.Ignorados"}} ({{totalIgnorados}})</option>
+			{{#each categorias}}<option value="{{valor}}" {{#if (eq ../filtro.categoria valor)}}selected{{/if}}>{{rotulo}}</option>{{/each}}
+		</select>
+		<button type="button" data-action="reindexar" data-tooltip="{{localize 'T20T.Catalogo.Reindexar'}}"><i class="fa-solid fa-rotate"></i></button>
+	</div>
+
+	<div class="t20t-tabela-rolagem">
+		<table class="t20t-tabela">
+			<thead>
+				<tr>
+					<th>{{localize "T20T.Catalogo.Item"}}</th>
+					<th>{{localize "T20T.Catalogo.Tipo"}}</th>
+					<th>{{localize "T20T.Catalogo.Preco"}}</th>
+					<th>{{localize "T20T.Catalogo.Categoria"}}</th>
+					<th>{{localize "T20T.Catalogo.Peso"}}</th>
+					<th>{{localize "T20T.Catalogo.Ajuste"}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each linhas}}
+					<tr data-uuid="{{uuid}}" data-categoria="{{categoria}}" data-busca="{{busca}}" class="{{#unless categoria}}t20t-ignorado{{/unless}}">
+						<td>
+							<a data-action="abrirItem" class="t20t-item-nome"><img src="{{img}}" alt=""> {{nome}}</a>
+							<div class="t20t-meta">{{origem}}</div>
+						</td>
+						<td>{{tipo}}</td>
+						<td>{{preco}}</td>
+						<td>{{rotuloCategoria}}<div class="t20t-meta">{{motivo}}</div></td>
+						<td>{{peso}}</td>
+						<td>
+							<select data-ajuste="{{uuid}}">
+								<option value="" {{#unless ajuste}}selected{{/unless}}>{{localize "T20T.Catalogo.Automatico"}}</option>
+								<option value="{{../excluir}}" {{#if (eq ajuste ../excluir)}}selected{{/if}}>{{localize "T20T.Catalogo.Excluir"}}</option>
+								{{#each ../categorias}}<option value="{{valor}}" {{#if (eq ../ajuste valor)}}selected{{/if}}>{{rotulo}}</option>{{/each}}
+							</select>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>

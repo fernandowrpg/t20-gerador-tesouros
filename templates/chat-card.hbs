@@ -1,0 +1,76 @@
+{{#*inline "t20tLinha"}}
+	{{#if faltando}}
+		<li class="t20t-linha t20t-faltando">
+			<i class="fa-solid fa-circle-question"></i>
+			<div class="t20t-info">
+				<span class="t20t-nome">{{nome}}</span>
+				<span class="t20t-meta">{{categoria}} · {{localize "T20T.Chat.NaoEncontrado"}}</span>
+			</div>
+		</li>
+	{{else}}
+		<li class="t20t-linha">
+			<div class="t20t-link{{#unless uuid}} t20t-sem-link{{/unless}}" {{#if uuid}}data-uuid="{{uuid}}" data-tooltip="{{localize 'T20T.Chat.Arraste'}}"{{/if}}>
+				<img src="{{img}}" alt="">
+				<div class="t20t-info">
+					<span class="t20t-nome">{{#if (gt qtd 1)}}{{qtd}}× {{/if}}{{nome}}</span>
+					<span class="t20t-meta">{{#if categoria}}{{categoria}} · {{/if}}{{t20tTibares preco}}{{#if origem}} · {{origem}}{{/if}}</span>
+					{{#if detalhes.length}}
+						<ul class="t20t-detalhes">
+							{{#each detalhes}}<li>{{this}}</li>{{/each}}
+						</ul>
+					{{/if}}
+				</div>
+				{{#if uuid}}<i class="fa-solid fa-grip-vertical t20t-alca"></i>{{/if}}
+			</div>
+		</li>
+	{{/if}}
+{{/inline}}
+
+<div class="t20t-cartao">
+	<header class="t20t-cabecalho">
+		<i class="fa-solid fa-gem"></i>
+		<h3>{{titulo}}</h3>
+	</header>
+
+	{{#if vazio}}
+		<p class="t20t-vazio">{{localize "T20T.Chat.Nada"}}</p>
+	{{/if}}
+
+	{{#if moedas.length}}
+		<h4>{{localize "T20T.Chat.Dinheiro"}}</h4>
+		<ul class="t20t-lista">{{#each moedas}}{{> t20tLinha}}{{/each}}</ul>
+	{{/if}}
+
+	{{#if riquezas.length}}
+		<h4>{{localize "T20T.Chat.Riquezas"}}</h4>
+		<ul class="t20t-lista">{{#each riquezas}}{{> t20tLinha}}{{/each}}</ul>
+	{{/if}}
+
+	{{#if itens.length}}
+		<h4>{{localize "T20T.Chat.Itens"}}</h4>
+		<ul class="t20t-lista">
+			{{#each itens}}
+				{{#if escolha}}
+					<li class="t20t-escolha">
+						<span class="t20t-escolha-titulo"><i class="fa-solid fa-code-branch"></i> {{localize "T20T.Chat.Escolha"}}</span>
+						<ul class="t20t-lista">{{#each opcoes}}{{> t20tLinha}}{{/each}}</ul>
+					</li>
+				{{else}}
+					{{> t20tLinha}}
+				{{/if}}
+			{{/each}}
+		</ul>
+	{{/if}}
+
+	{{#unless vazio}}
+		<footer class="t20t-total">{{localize "T20T.Chat.Total"}}: <strong>{{totalFormatado}}</strong></footer>
+		<p class="t20t-dica"><i class="fa-solid fa-hand-pointer"></i> {{localize "T20T.Chat.Dica"}}</p>
+	{{/unless}}
+
+	{{#if mostrarRolagens}}
+		<details class="t20t-rolagens">
+			<summary>{{localize "T20T.Chat.Rolagens"}}</summary>
+			<ol>{{#each log}}<li>{{this}}</li>{{/each}}</ol>
+		</details>
+	{{/if}}
+</div>

@@ -1,0 +1,60 @@
+<div class="t20t-corpo">
+	<fieldset>
+		<legend>{{localize "T20T.Gerador.PorND"}}</legend>
+		<div class="form-group">
+			<label>{{localize "T20T.Gerador.ND"}}</label>
+			<div class="form-fields">
+				<select name="nd">
+					{{#each nds}}<option value="{{valor}}" {{#if selecionado}}selected{{/if}}>{{valor}}</option>{{/each}}
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label>{{localize "T20T.Gerador.TipoTesouro"}}</label>
+			<div class="form-fields">
+				<select name="tesouro">
+					{{#each tesouros}}<option value="{{valor}}" {{#if selecionado}}selected{{/if}}>{{rotulo}}</option>{{/each}}
+				</select>
+			</div>
+			<p class="hint">{{localize "T20T.Gerador.TipoTesouroDica"}}</p>
+		</div>
+		<div class="form-group">
+			<label>{{localize "T20T.Gerador.Vezes"}}</label>
+			<div class="form-fields">
+				<input type="number" name="vezes" value="{{vezes}}" min="1" max="50" step="1">
+			</div>
+			<p class="hint">{{localize "T20T.Gerador.VezesDica"}}</p>
+		</div>
+		<div class="form-group">
+			<label>{{localize "T20T.Gerador.Colunas"}}</label>
+			<div class="form-fields">
+				<label class="t20t-check"><input type="checkbox" name="dinheiro" {{checked dinheiro}}> {{localize "T20T.Chat.Dinheiro"}}</label>
+				<label class="t20t-check"><input type="checkbox" name="itens" {{checked itens}}> {{localize "T20T.Chat.Itens"}}</label>
+			</div>
+		</div>
+		<button type="submit" class="t20t-principal">
+			<i class="fa-solid fa-dice-d20"></i> {{localize "T20T.Gerador.Rolar"}}
+		</button>
+	</fieldset>
+
+	<fieldset>
+		<legend>{{localize "T20T.Gerador.Direta"}}</legend>
+		<div class="form-group">
+			<label>{{localize "T20T.Gerador.Categoria"}}</label>
+			<div class="form-fields">
+				<select name="direta">
+					{{#each diretas}}<option value="{{valor}}" {{#if selecionado}}selected{{/if}}>{{rotulo}}</option>{{/each}}
+				</select>
+				<input type="number" name="qtdDireta" value="{{qtdDireta}}" min="1" max="20" step="1" class="t20t-qtd" data-tooltip="{{localize 'T20T.Gerador.Quantidade'}}">
+			</div>
+		</div>
+		<button type="button" data-action="rolarDireto">
+			<i class="fa-solid fa-dice"></i> {{localize "T20T.Gerador.RolarDireto"}}
+		</button>
+	</fieldset>
+
+	<div class="t20t-rodape">
+		<button type="button" data-action="abrirCatalogo"><i class="fa-solid fa-book-open"></i> {{localize "T20T.Catalogo.Titulo"}}</button>
+		<button type="button" data-action="limpar"><i class="fa-solid fa-broom"></i> {{localize "T20T.Limpar.Botao"}}</button>
+	</div>
+</div>
